@@ -1,0 +1,54 @@
+/*
+  Index Styles
+*/
+
+.jumbotron.jumbotron-index {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 100px;
+  background:
+    linear-gradient(darken(@brand-primary, 10%), transparent),
+    linear-gradient(90deg, @brand-warning, transparent),
+    linear-gradient(-90deg, @brand-primary, transparent);
+
+  h2 {
+    color: white;
+    text-align: center;
+    font-size: 600%;
+    line-height: 0.6;
+    text-shadow: 0 1px 2px fade(@brand-default, 80%);
+
+    small {
+      color: white;
+      font-size: 33%;
+    }
+  }
+}
+
+.features {
+  width: 80%;
+  margin: 0 auto;
+
+  .reset-ul();
+
+  .feature {
+    padding: 25px 50px;
+
+    i.fa {
+      font-size: 5em;
+      float: left;
+      color: @brand-warning;
+    }
+
+    .feature-heading {
+      margin-bottom: 0;
+      font-family: @font-family-logo;
+      font-weight: 200;
+    }
+
+    .feature-body {
+      font-size: 120%;
+    }
+  }
+}

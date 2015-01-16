@@ -1,0 +1,32 @@
+/*
+  Bubble Box Styles
+*/
+
+.bubble-box {
+  position: relative;
+
+  .bubble-animation-frame {
+    position: absolute;
+    perspective: 50px;
+    -webkit-perspective: 50px;
+    -moz-perspective: 50px;
+    -ms-perspective: 50px;
+    transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+
+    .trbl();
+
+    opacity: 0.55;
+  }
+
+  .bubble {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: @brand-default;
+  }
+}

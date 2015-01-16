@@ -1,0 +1,40 @@
+/*
+  Navigation Styles
+*/
+
+.navbar {
+  margin: 0;
+
+  .box-shadow(~"none !important");
+
+  .navbar-brand {
+    font-size: 275%;
+    font-family: @font-family-logo;
+    color: @brand-default;
+    font-weight: normal;
+
+    span.tank {
+      color: @brand-primary;
+      font-weight: 200;
+    }
+  }
+
+  li {
+    font-size: 14px;
+    text-transform: uppercase;
+
+    .transition-all();
+
+    &:hover {
+      .box-shadow(0 0 2px fade(@brand-default, 60%) inset);
+      background:
+        linear-gradient(transparent, fade(@brand-warning, 40%)),
+        linear-gradient(90deg, transparent, fade(@brand-primary, 40%));
+
+      a {
+        text-shadow: 0 1px 2px fade(@brand-default, 80%);
+        color: white !important;
+      }
+    }
+  }
+}
