@@ -1,0 +1,60 @@
+<h2>Parameter Calculator</h2>
+<hr />
+
+<div class="form-group">
+  <div class="input-group">
+    {{input type="number" class="form-control" value=volume placeholder="Total Tank Water Volume"}}
+    <div class="input-group-addon">Gal</div>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="input-group">
+    {{input type="number" class="form-control" value=parameterLevel placeholder="Parameter Level"}}
+    <div class="input-group-addon">ppm</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <div class="input-group">
+        {{input type="number" class="form-control" value=volumeChanges placeholder="Volume of Water Changes"}}
+        <div class="input-group-addon">Gal</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="form-group">
+      {{input type="number" class="form-control" value=numberChanges placeholder="Number of Changes"}}
+    </div>
+  </div>
+</div>
+
+<p class="calculator-results">
+  <strong>Water Replaced:</strong>
+    <span class="pull-right">
+      {{#if waterReplaced}}
+        {{waterReplaced}}
+      {{else}}
+        N/A
+      {{/if}}
+    </span><br />
+  <strong>New Parameter Level:</strong>
+    <span class="pull-right">
+      {{#if newParameterLevel}}
+        {{newParameterLevel}}ppm
+      {{else}}
+        N/A
+      {{/if}}
+    </span><br />
+  <strong>Parameter Reduction:</strong>
+    <span class="pull-right">
+      {{#if parameterReduction}}
+        {{parameterReduction}}%
+      {{else}}
+        N/A
+      {{/if}}
+    </span>
+</p>
